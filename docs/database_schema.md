@@ -5,9 +5,9 @@
 **Date:**  17/01/2026
 
 ---
-```mermaid
 ## 1. Entity Relationship Diagram
 The Diagram below details the relational structure within the PostgreSQL databse.
+```mermaid
 erDiagram
     USERS ||--o{ JOBS : "posts (as requester)"
     USERS ||--o{ JOBS : "accepts (as driver)"

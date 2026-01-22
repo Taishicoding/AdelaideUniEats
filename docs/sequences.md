@@ -52,7 +52,8 @@ sequenceDiagram
     API->>Stripe: Refund $25
     API->>DB: Update (status=CANCELLED, payment=REFUNDED)
     API->>Sarah: "Refunded $25"
-    ```
+
+```
 
 ## 4. Price over budget
 
@@ -76,6 +77,7 @@ sequenceDiagram
         Sarah->>API: Cancel job
         API->>Jake: "Job cancelled by the requester"
     end
-    ```
+
+```
 
     

@@ -6,7 +6,7 @@
 
 ---
 ## 1. Entity Relationship Diagram
-The Diagram below details the relational structure within the PostgreSQL databse.
+The Diagram below details the relational structure within the PostgreSQL database.
 ```mermaid
 erDiagram
     USERS ||--o{ JOBS : "posts (as requester)"
@@ -20,7 +20,7 @@ USERS{
     string password_hash "Bcrypt hash"
     string full_name
     string phone_number "For coordination"
-    boolean is_verified "Email Verfication Status"
+    boolean is_verified "Email Verification Status"
     int completed_jobs_count "Jobs completed as driver"
     timestamp created_at
     timestamp updated_at
@@ -28,7 +28,7 @@ USERS{
 JOBS{
     uuid id PK
     uuid requester_id FK "Link to USERS"
-    uuid driver_id FK "Link to USERS (nulltable)"
+    uuid driver_id FK "Link to USERS (nullable)"
     string status "OPEN, ACCEPTED, PURCHASED, IN_TRANSIT, DELIVERED, CANCELLED, COMPLETED"
     string pickup_location "e.g. MACDONALDS RUNDLE MALL"
     string dropoff_location "e.g. Hub Study Room Lv.3 Room 202"
@@ -59,7 +59,7 @@ TRANSACTIONS{
 MESSAGES{
     uuid id PK
     uuid job_id FK
-    uuid sender_id "Link to USERS"
+    uuid sender_id FK "Link to USERS"
     text content
     boolean is_read "Default false"
     timestamp sent_at

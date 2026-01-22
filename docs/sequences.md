@@ -37,6 +37,7 @@ sequenceDiagram
 ```
 
 ## 3. Cancellation Flow
+
 ```mermaid
     sequenceDiagram
     actor Jake as Driver
@@ -54,6 +55,7 @@ sequenceDiagram
     ```
 
 ## 4. Price over budget
+
 ```mermaid
     sequenceDiagram
     actor Jake as Driver

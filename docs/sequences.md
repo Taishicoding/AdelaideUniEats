@@ -8,6 +8,7 @@
 Payments will utilise the Escrow like behaviour visible in the payment platform Stripe to hold funds until the Requester confirms delivery of their product.
 
 ## 2. Succesful Delivery
+
 ```mermaid
 sequenceDiagram
     actor Sarah as Requester
